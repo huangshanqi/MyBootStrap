@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap 101 Template</title>
+
+    <!-- Bootstrap -->    
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <script type="text/javascript">
+      $(function(){
+         var comment = $("#comment");
+         $(".bigger").click(function(){
+          if (!comment.is(":animated")) {
+            if (comment.height() < 500) {
+            comment.animate({height:"+=50"},400);
+          }
+          };
+         });
+
+          $(".smaller").click(function(){
+          if (!comment.is(":animated")) {
+            if (comment.height() > 50) {
+            comment.animate({height:"-=50"},400);
+          }
+          };
+         });
+
+      });
+    </script>
+
+
+
+
+    <style type="text/css">
+     input:focus,textarea:focus{
+      border: 1px solid #f00;
+      background: #fcc;
+     }
+    </style>
+
+  </head>
+  <body>  
+    <form action="#" method="POST" id="regForm">
+      <fieldset>
+        <div>
+          <label for="username">name:</label>
+          <input id="usernmae" type="text">
+        </div>
+        <div>
+          <label for="password">password:</label>
+          <input id="password" type="password">
+        </div>
+        <div>
+          <label for="msg">详细信息:</label>
+          <textarea id="msg"></textarea>
+        </div>
+      </fieldset>
+    </form>
+
+    <form>
+      <div class="msg">
+        <div class="msg_caption">
+          <span class="bigger">放大</span>
+          <span class="smaller">缩小</span>
+        </div>
+        <div>
+          <textarea id="comment" rows="8" cols="20">
+          理解理解啦啦啦的价格将案件法律法拉发垃圾费拉距离放假放垃圾啊垃圾垃圾啊理解拉就拉了就爱了大家啦福利发放建安费
+          </textarea>
+        </div>
+      </div>
+      
+    </form>
+
+  </body>
+</html>

@@ -1,0 +1,111 @@
+<html>
+  <head>
+    <meta charset="utf-8" pageEncoding="utf-8">
+    <title>锋利的JQuery</title>
+    <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript">
+    $(function(){
+      //地址框操作
+    //地址框获取焦点
+     $("#address").focus(function(){
+      var address_text = $(this).val();
+      if (address_text == "请输入邮箱地址") {
+        $(this).val("");
+      }
+     });
+   //地址框失去焦点
+     $("#address").blur(function(){
+      var address_text = $(this).val();
+      if (address_text == "") {
+        $(this).val("请输入邮箱地址");
+      }
+     });
+
+     //密码框
+     $("#password").focus(function(){
+      var password_text = $(this).val();
+      if (password_text == "请输入邮箱密码") {
+        $(this).val("");
+      };
+     });
+
+           $("#password").blur(function(){
+        var password_text = $(this).val();
+        if (password_text == "") {
+          $(this).val("请输入邮箱密码");
+        }
+      });
+
+
+
+  
+     
+
+    $("#submit").click(function(e){
+      alert(e.which);
+    });
+
+     //
+     //alert("astggaggg");
+
+    $("a.tooltip").mouseover(function(e){
+      this.mytitle=this.title;
+      this.title="";
+      //创建div元素
+      var tooltip ="<div id='tooltip'>"+this.mytitle+"<div/>";
+      $("body").append(tooltip);
+      $("#tooltip").css({
+        "top":(e.pageY+20)+"px",
+        "left":(e.pageX+10)+"px"
+      }).show("fast");
+    }).mouseout(function(){
+      this.title=this.mytitle;
+      $("#tooltip").remove();//移除
+
+    });
+     
+     //操作图片的
+
+
+     //绑定事件
+     $("#panel h5.head").click(function(){
+      $(this).next().toggle();
+     });
+
+  });
+    //test
+    //$("p").CSS("fontSize","300px");
+    </script>
+    
+
+
+  </head>
+  <body>
+    <p id="p" >aljlajfl</p>
+    <form action="#">
+       <input type="text" id = "address" value="请输入邮箱地址"/>
+       <br/>
+       <input type="text" id = "password" value="请输入邮箱密码"/>
+       <br/>
+       <input type="submit" id ="submit" value = "登录"/>
+    </form>
+
+    <p>
+      <a href="#" class="tooltip" title="这是我的超链接提示">提示</a>
+    </p>
+
+    <br>
+
+    <div id ="panel">
+      <h5 class ="head">绑定事件</h5>
+      <div class="content">
+        家里就放了两个姐姐撒过几个了敬爱放到了发过来撒放家里就点击手机官方价格尽量加咖喱家里的农村vsnfjf垃圾哦i文件哦几天时间公积金按揭房间爱啦啦挨个看看哈
+      </div>
+      
+    </div>
+
+
+
+  </body>
+
+</html>
